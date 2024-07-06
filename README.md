@@ -34,44 +34,53 @@ This repository contains scripts to manage your Conda environments and Git opera
 ### Directory Structure
 
 ```
-ml-env-dev-tools
+your working dir
 │
 ├── utils
-│   └── scripts
+|   └── scripts
+│       └── move-to-working-dir
+|             └── setup-env.sh 
 │       ├── export-conda-env.sh
 │       ├── setup-conda-env.sh
 │       └── manage-git.sh
 │
+├── YOUR FILES
 ├── environment.yml
 ├── setup-env.sh
 ├── .gitmodules
 └── README.md
 ```
 
-### Scripts and Their Usage
+### Usage Instructions
 
-1. **Export Conda Environment**:
+- **Copy `setup-env.sh` to your main working directory**:
+   ```sh
+   cp setup-env.sh /path/to/your/main/project/directory
+   cd /path/to/your/main/project/directory
+   ```
+
+-  **Export Conda Environment**:
    - This script exports your Conda environment to a YAML file.
    - **Command**:
      ```sh
      ./setup-env.sh --export-env
      ```
 
-2. **Import Conda Environment**:
+- **Import Conda Environment**:
    - This script imports a Conda environment from a YAML file.
    - **Command**:
      ```sh
      ./setup-env.sh --import-env-yaml
      ```
 
-3. **Force Update Conda Environment**:
+- **Force Update Conda Environment**:
    - This script forcefully updates your Conda environment according to the YAML file.
    - **Command**:
      ```sh
      ./setup-env.sh --force-env-yaml
      ```
 
-4. **Manage Git Operations**:
+- **Manage Git Operations**:
    - This script fetches, pulls, and manages your Git branches.
    - **Command**:
      ```sh
@@ -94,39 +103,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Feel free to reach out for any questions or help. Let's build a better development environment together!
 
-### Instructions Summary
-
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/roboticvedant/ml-env-dev-tools.git
-   cd ml-env-dev-tools
-   ```
-
-2. **Add the `utils-scripts` as a submodule**:
-   ```sh
-   git submodule add https://github.com/roboticvedant/utils-scripts.git utils
-   git submodule init
-   git submodule update
-   ```
-
-3. **Use the scripts**:
-   - Export environment:
-     ```sh
-     ./setup-env.sh --export-env
-     ```
-   - Import environment:
-     ```sh
-     ./setup-env.sh --import-env-yaml
-     ```
-   - Force update environment:
-     ```sh
-     ./setup-env.sh --force-env-yaml
-     ```
-   - Manage Git:
-     ```sh
-     ./setup-env.sh
-     ```
-
+--- 
 ### Reporting Issues and Feature Requests
 
 - Open an issue on the [GitHub Issues](https://github.com/roboticvedant/ml-env-dev-tools/issues) page.
@@ -134,3 +111,5 @@ Feel free to reach out for any questions or help. Let's build a better developme
 ### Collaboration
 
 - Fork the repository, make your changes, and submit a pull request.
+
+By following these instructions, users will be able to set up and use the tools effectively, report issues, and contribute to the project.
